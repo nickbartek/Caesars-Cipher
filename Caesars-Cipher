@@ -1,0 +1,23 @@
+function rot13(str) {
+  var i=0
+  let arr=[]
+let alp="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+alp=alp.concat(alp)
+alp=alp.split('');
+str=str.split('');
+
+while (str[i]){
+let a=alp.indexOf(str[i])
+//console.log(alp.indexOf(str[i]),"while loop",str[i],alp[a+13])
+if(str[i]==" "){arr.push(" ");i++; continue;}
+if(str[i]=="!"){arr.push("!");i++; continue;}
+if(str[i]=="?"){arr.push("?");i++; continue;}
+if(str[i]=="."){arr.push(".");i++; continue;}
+arr.push(alp[a+13])
+
+i++}
+
+ let result=arr.join('')
+  return result;}
+
+rot13("SERR CVMMN.");
